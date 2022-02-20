@@ -36,122 +36,85 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ea.</p>
                     </div>
                 </div>
+   
 
-                <div class="row px-2 bookmarks ">
-
+                <!-- sevlilar -->
+                <div class="row px-2" id="bookmars-list">
+                    <div class="col-12 d-flex align-items-center justify-content-between bg-light my-2">
+                        <div class="titles">
+                            <a href="#"><img class="w-24 h-24" src="./img/book.png" alt=""></a>
+                            <a href="#"><img class="w-24 h-4" src="./img/back.png" alt=""></a>
+                        </div>
+                        <div class="icons">
+                          
+                            
+                        </div>
+                    </div>
                 </div>
-               
-               
             </div>
-            <div class="col-md-10 card-box">
-                <div class="row bg-light">
+
+            <!-- card box -->
+                    <div  class="col-10 d-flex mt-4 ">
+                        <div id="user-list" class="row p-3 g-3 bg-light">
+                        
                    
-                </div>
-                
-            </div>
+
+                        </div>
+                    </div>
         </div>
     </div>
 
-    <template id="bookmarks__template">
+
+ <!-- sevimli ga qp'shi temlate -->
+     <template id="bookmark__template">
         <div class="col-12 d-flex align-items-center justify-content-between bg-light my-2">
             <div class="titles">
-                <h5>Python</h5>
-                <p>Books author </p>
-            </div>
-            <div class="icons">
-                <a href="#"><img class="w-24 h-24" src="./img/book.png" alt=""></a>
-                <a href="#"><img class="w-24 h-4" src="./img/back.png" alt=""></a>
-                
+                <button><img class="w-24 h-24" src="./img/book.png" alt=""></button>
+                <button><img class="w-24 h-4" src="./img/back.png" alt=""></button>
             </div>
         </div>
-    </template>
+    </template> 
 
-    <template id="card__template">
-        <div class="col-md-4">
-            <div class="card p-2" style="width: 18rem;">
-                <img src="https://picsum.photos/200" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title"></h5>
-                  <p class="card-text m-0"></p>
-                  <p class="card-text m-0"></p>
+
+<!-- assosiy template -->
+    <template id="user-template">
+                <div class="col-3 col-md-4 ">
+                    <div class="users h-100  border border-1 p-2 bg-light shadow-lg p-3 mb-5 bg-white rounded">
+                        <img class="user-img p-2 w-100" src="http://picsum.photos/400" alt="">
+                        <h6 class="user-title mt-3  mb-3">Title</h6>
+                        <p class="user-id">id</p>
+                        <div class=" justify-content-between">
+                            <button class="bookmark-btn btn btn-sm btn-warning text-lg-end" type="button">Bookmark</button>
+                            <button class="more-btn btn btn-sm btn-light text-primary" type="button">More Info</button>
+                        </div>
+    
+                        <button class="btn btn-secondary w-100 mt-1" type="button">Read</button>
+                    </div>
                 </div>
-                <div class="card-btns d-flex flex-wrap w-100 justify-content-around ">
-                    <a href="#" class="btn btn-warning w-45 ">Bookmarks</a>
-                    <a href="#" class="btn btn-light text-primary w-45 ">More info</a>
-                    <a href="#" class="btn btn-secondary w-100 mt-1">Read more</a>
-                </div>
-            </div>
-        </div>
-    </template>
+        
+    </template> 
 
 
+     <!-- <template id="bookmarks-card">
+           <div class="col-md-4">
+                        <div class="card p-2">
+                            <img src="https://picsum.photos/200" class="card_img card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">endru forgot jeams bont</h5>
+                              <p class="card-text m-0">salom sevgimg g'unchasi</p>
+                              <p class="card-text m-0">mard bol erke bol dostga dost bol</p>
+                            </div>
+                            <div class="card-btns d-flex flex-wrap w-100 justify-content-around ">
+                                <a href="#" class="btn btn-warning w-45 ">Bookmarks</a>
+                                <a href="#" class="btn btn-light text-primary w-45 ">More info</a>
+                                <a href="#" class="btn btn-secondary w-100 mt-1">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+    </template>  -->
 </body>
 <script src="./js/script.js"></script>
 <script src="./js/login.js"></script>
 </html>
 
 
-
-<!-- <div class="col-md-4">
-    <div class="card p-2" style="width: 18rem;">
-        <img src="https://picsum.photos/200" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text m-0">Some quick example</p>
-          <p class="card-text m-0"> year</p>
-        </div>
-        <div class="card-btns d-flex flex-wrap w-100 ">
-            <a href="#" class="btn btn-warning w-50 ">Bookmarks</a>
-            <a href="#" class="btn btn-info w-50 ">More info</a>
-            <a href="#" class="btn btn-secondary w-100 mt-1">Read more</a>
-        </div>
-    </div>
-</div>
-
-<div class="col-md-4">
-    <div class="card p-2" style="width: 18rem;">
-        <img src="https://picsum.photos/200" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text m-0">Some quick example</p>
-          <p class="card-text m-0"> year</p>
-        </div>
-        <div class="card-btns d-flex flex-wrap w-100 ">
-            <a href="#" class="btn btn-warning w-50 ">Bookmarks</a>
-            <a href="#" class="btn btn-info w-50 ">More info</a>
-            <a href="#" class="btn btn-secondary w-100 mt-1">Read more</a>
-        </div>
-    </div>
-</div> -->
-
-<!-- 
-
-    <div class=" first">
-        <div class="row m-0">
-            <div class="box">
-                <div class=" container d-flex align-items-center bg-white">
-                    <img class="p-3 " src="./img/hompagelogo.png" alt="">
-                    <input class=" search__input form-control w-28 bg-light"  placeholder="Search books" type="text" id=""> 
-                    <img class="ms-5" src="./img/son.png" alt="">
-                    <button class="searchBtn ms-5 btn btn-primary text-center " type="button">Logout</button>
-                </div> -->
-                <!-- <div class=" container d-flex align-items-center bg-white justify-content-between p-3"> 
-                   
-                </div> -
-             </div> -->
-    <!-- </div>
-    </div>
-
-    <div class="second row ">
-        <div class="col-12 d-flex align-items-center justify-content-between">
-            <p class="showing w-141 h-17">Showing <span>18</span> Result(s)</p>
-            <button class="btn btn-secondary w-165 h-34 ms-5 text-center"><img src="./img/order.png" alt=""> Order by newest</button>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptatibus soluta assumenda harum facilis commodi perferendis tempore ducimus nisi minima optio dicta nemo, repudiandae iste esse! Blanditiis architecto impedit corporis.
-        </div>
-        <div class="col-md-10"></div>
-    </div> --> --> -->

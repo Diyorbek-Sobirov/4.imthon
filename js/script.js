@@ -1,6 +1,9 @@
 var userTemplate = document.querySelector('#user-template').content
 var userItemEl=document.querySelector('#playlist-item-template')
 var userList = document.querySelector('#user-list')
+var bookmarktemp = document.querySelector('#bookmark__template').content
+var bookmarsList = document.querySelector('#bookmars-list')
+
 function renderUsers(users,node){
     node.innerHTML='';
     let userListFragment=document.createDocumentFragment()
@@ -8,6 +11,8 @@ function renderUsers(users,node){
     for(let i= 0; i<10; i++){
         let userItemEl=document.importNode(userTemplate,true)
 
+        let name = userItemEl.querySelector('.titleName')
+        
         let temp=users.items[i].volumeInfo.title
         userItemEl.querySelector('.user-title').textContent=temp
 
@@ -21,12 +26,16 @@ function renderUsers(users,node){
         let sevimli=document.querySelector('.titles ')
         let bookmarkBtn=userItemEl.querySelector('.bookmark-btn')
         bookmarkBtn.addEventListener('click',event=>{
-            bookmarkBtn.dataset=temp 
 
-            console.log(temp)
-            console.log(event.target.matches('.bookmark-btn'))
-             
-            sevimli.append(temp)
+            let memp = document.importNode(bookmarktemp, true)
+
+            // let mytemp = JSON.stringify(temp)
+
+            memp.querySelector('.titleName').textContent = temp
+
+            bookmarsList.appendChild(memp)
+           
+
         })
             userListFragment.appendChild(userItemEl)
     }
@@ -62,4 +71,4 @@ getUsers()
 
 //sevimliga js
 var bookmarkTemplate=document.querySelector('#bookmark__template')
-var titles=Document.querySelector('.titles')
+var titles=document.querySelector('.titles')
